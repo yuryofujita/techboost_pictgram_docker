@@ -2,6 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-offset-4 col-md-4 users-new-container">
+        <% Rails.logger.debug("users newsのviewに入りました。") %>
         <h1 class="text-center text-white">Sign in</h1>
         <%= form_for @user do |f| %>
           <div class="form-group">

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  Rails.logger.debug("#########ルートの中に入りました。########")
   get 'sessions/new'
 
   get 'pages/index'
-  get 'pages/help'
+  get 'pages/help', to: 'pages#help'
   resources :users
   resources :topics
 

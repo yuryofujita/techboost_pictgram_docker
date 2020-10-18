@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def new
+    Rails.logger.debug("usersコントローラのnewアクションに入りました。")
     @user = User.new
   end
 
@@ -7,6 +8,7 @@ class UsersController < ApplicationController
     #@user = User.new(name: params[:user][:name], email: params[:user][:email])
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = user.id
       redirect_to root_path, success: '登録が完了しました'
     else
       flash.now[:danger] = "登録に失敗しました"

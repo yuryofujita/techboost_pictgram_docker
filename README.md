@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+http://localhost:3000/
+
+
+# コンテナの中に入る
+
+```sh
+docker-compose exec web bash
+```
