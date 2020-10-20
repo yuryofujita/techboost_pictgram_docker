@@ -7,4 +7,11 @@ class User < ApplicationRecord
   has_many :topics
   has_many :favorites
   has_many :favorite_topics, through: :favorites, source: 'topic'
+
+  # 名前に様をつける
+  def name_sama(name)
+    if name != '' then
+      name + '様'
+    end
+  end
 end
